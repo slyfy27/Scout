@@ -2,7 +2,7 @@
 //  UINavigationController+ScoutingLeak.m
 //  Scout
 //
-//  Created by meetyou on 2021/7/14.
+//  Created by slyfy27 on 2021/7/14.
 //
 
 #import "UINavigationController+ScoutingLeak.h"
