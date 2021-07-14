@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D6A0058269EC7F100B147C1 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6A0057269EC7F100B147C1 /* LeakViewController.m */; };
+		8D6A005E269ECB0800B147C1 /* UINavigationController+ScoutingLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6A005D269ECB0800B147C1 /* UINavigationController+ScoutingLeak.m */; };
 		8D794A35269D31160079432E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D794A34269D31160079432E /* AppDelegate.m */; };
 		8D794A38269D31160079432E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D794A37269D31160079432E /* SceneDelegate.m */; };
 		8D794A3B269D31160079432E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D794A3A269D31160079432E /* ViewController.m */; };
@@ -40,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D6A0056269EC7F100B147C1 /* LeakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeakViewController.h; sourceTree = "<group>"; };
+		8D6A0057269EC7F100B147C1 /* LeakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeakViewController.m; sourceTree = "<group>"; };
+		8D6A005C269ECB0800B147C1 /* UINavigationController+ScoutingLeak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ScoutingLeak.h"; sourceTree = "<group>"; };
+		8D6A005D269ECB0800B147C1 /* UINavigationController+ScoutingLeak.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+ScoutingLeak.m"; sourceTree = "<group>"; };
 		8D794A30269D31160079432E /* Scout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D794A33269D31160079432E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8D794A34269D31160079432E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,6 +129,8 @@
 				8D794A37269D31160079432E /* SceneDelegate.m */,
 				8D794A39269D31160079432E /* ViewController.h */,
 				8D794A3A269D31160079432E /* ViewController.m */,
+				8D6A0056269EC7F100B147C1 /* LeakViewController.h */,
+				8D6A0057269EC7F100B147C1 /* LeakViewController.m */,
 				8D794A3C269D31160079432E /* Main.storyboard */,
 				8D794A3F269D31180079432E /* Assets.xcassets */,
 				8D794A41269D31180079432E /* LaunchScreen.storyboard */,
@@ -169,6 +177,8 @@
 				8D794A86269D71E60079432E /* NSObject+ScoutingLeak.m */,
 				8D794A8B269D81B60079432E /* UIViewController+ScoutingLeak.h */,
 				8D794A8C269D81B60079432E /* UIViewController+ScoutingLeak.m */,
+				8D6A005C269ECB0800B147C1 /* UINavigationController+ScoutingLeak.h */,
+				8D6A005D269ECB0800B147C1 /* UINavigationController+ScoutingLeak.m */,
 			);
 			path = LeakFinder;
 			sourceTree = "<group>";
@@ -306,10 +316,12 @@
 				8D794A3B269D31160079432E /* ViewController.m in Sources */,
 				8D794A6E269D5E070079432E /* ScoutLeakFinder.m in Sources */,
 				8D794A8D269D81B60079432E /* UIViewController+ScoutingLeak.m in Sources */,
+				8D6A005E269ECB0800B147C1 /* UINavigationController+ScoutingLeak.m in Sources */,
 				8D794A81269D5F6B0079432E /* NSObject+Scout.m in Sources */,
 				8D794A35269D31160079432E /* AppDelegate.m in Sources */,
 				8D794A46269D31180079432E /* main.m in Sources */,
 				8D794A38269D31160079432E /* SceneDelegate.m in Sources */,
+				8D6A0058269EC7F100B147C1 /* LeakViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

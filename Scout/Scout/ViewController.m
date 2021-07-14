@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "LeakViewController.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (IBAction)push:(id)sender {
+    LeakViewController *vc = [LeakViewController new];
+    vc.parentVC = self;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (IBAction)present:(id)sender {
+    LeakViewController *vc = [LeakViewController new];
+    vc.parentVC = self;
+    [self presentViewController:vc animated:YES completion:NULL];
 }
 
 

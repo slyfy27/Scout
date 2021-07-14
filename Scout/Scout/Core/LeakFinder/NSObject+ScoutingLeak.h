@@ -12,7 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NSObject (ScoutingLeak)
 
 /// 开始检测泄漏
-- (void)scoutingLeak;
+- (BOOL)scoutingLeak __attribute__((objc_requires_super));
+/// 获取视图栈
+- (NSArray *)viewStack;
 
 @end
 

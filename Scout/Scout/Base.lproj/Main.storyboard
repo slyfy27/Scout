@@ -22,23 +22,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fuw-Qa-mWj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584" y="144"/>
+            <point key="canvasLocation" x="258" y="176"/>
         </scene>
-        <!--Item 1-->
-        <scene sceneID="XuN-85-1uv">
+        <!--Item-->
+        <scene sceneID="5UM-UY-WU5">
             <objects>
-                <viewController id="sk3-FZ-lnl" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="L55-4B-UUQ">
+                <navigationController id="hXl-vg-TFK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="TUQ-fu-4Qg"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Flk-C5-7bE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Rix-SA-Ork" kind="relationship" relationship="rootViewController" id="dZC-30-cGB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guJ-XV-mun" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="-562"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bi8-B0-oY1">
+            <objects>
+                <viewController id="Rix-SA-Ork" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oSo-RE-K1v">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="7Ve-78-AOY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIY-Xb-uix">
+                                <rect key="frame" x="37" y="136" width="36" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DdB-e0-1vJ">
+                                <rect key="frame" x="20" y="176.5" width="374" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cv-AR-b76">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="48"/>
+                                        <state key="normal" title="push"/>
+                                        <connections>
+                                            <action selector="push:" destination="Rix-SA-Ork" eventType="touchUpInside" id="TtU-Dl-ueE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0j-Pi-GVa">
+                                        <rect key="frame" x="192" y="0.0" width="182" height="48"/>
+                                        <state key="normal" title="present"/>
+                                        <connections>
+                                            <action selector="present:" destination="Rix-SA-Ork" eventType="touchUpInside" id="pev-Co-59k"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="u2v-Rv-MPD"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="l2u-nO-B2P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DdB-e0-1vJ" firstAttribute="leading" secondItem="l2u-nO-B2P" secondAttribute="leading" constant="20" id="Ctu-jj-gcj"/>
+                            <constraint firstItem="cIY-Xb-uix" firstAttribute="top" secondItem="l2u-nO-B2P" secondAttribute="top" constant="48" id="GYk-Pk-zox"/>
+                            <constraint firstItem="cIY-Xb-uix" firstAttribute="leading" secondItem="l2u-nO-B2P" secondAttribute="leading" constant="37" id="PSt-3T-qJH"/>
+                            <constraint firstItem="l2u-nO-B2P" firstAttribute="trailing" secondItem="DdB-e0-1vJ" secondAttribute="trailing" constant="20" id="Yxh-RO-Bb7"/>
+                            <constraint firstItem="DdB-e0-1vJ" firstAttribute="top" secondItem="cIY-Xb-uix" secondAttribute="bottom" constant="20" id="bOr-Bw-9nr"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="8Z4-Xn-UJj"/>
+                    <navigationItem key="navigationItem" id="WCo-YY-gTr"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vD0-Xg-kxM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TcT-6s-MFl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584" y="-463"/>
+            <point key="canvasLocation" x="1234.7826086956522" y="-563.16964285714278"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="H3u-jD-HfS">
@@ -50,8 +104,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="sk3-FZ-lnl" kind="relationship" relationship="viewControllers" id="HoT-KM-27l"/>
                         <segue destination="p3E-lC-E6y" kind="relationship" relationship="viewControllers" id="OM9-iG-YLx"/>
+                        <segue destination="hXl-vg-TFK" kind="relationship" relationship="viewControllers" id="iif-5z-ARI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SD3-Oa-9WF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

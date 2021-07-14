@@ -8,6 +8,9 @@
 #import "UIViewController+ScoutingLeak.h"
 #import "NSObject+Scout.h"
 #import "NSObject+ScoutingLeak.h"
+#import <objc/runtime.h>
+
+static const void *const scoutingVCPopedKey = &scoutingVCPopedKey;
 
 @implementation UIViewController (ScoutingLeak)
 
@@ -21,7 +24,9 @@
 
 - (void)scoutingLeak_viewDidDisappear:(BOOL)animated {
     [self scoutingLeak_viewDidDisappear:animated];
-    [self scoutingLeak];
+    if ([objc_getAssociatedObject(self, scoutingVCPopedKey) boolValue]) {
+        [self scoutingLeak];
+    }
 }
 
 - (void)scoutingLeak_dismissControllerAnimated:(BOOL)animated completion:(void (^)(void))completion {
