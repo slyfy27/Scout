@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 开始检测泄漏
 - (BOOL)scoutingLeak __attribute__((objc_requires_super));
+/// 检测子视图、子控制器等
+- (void)scoutingChildren:(NSArray *)children;
 /// 获取视图栈
 - (NSArray *)viewStack;
 

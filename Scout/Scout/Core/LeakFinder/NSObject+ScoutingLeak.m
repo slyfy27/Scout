@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 static const void *const scoutingVStackKey = &scoutingVStackKey;
+static const void *const scoutingParentPtrsKey = &scoutingParentPtrsKey;
 
 @implementation NSObject (ScoutingLeak)
 
@@ -25,6 +26,17 @@ static const void *const scoutingVStackKey = &scoutingVStackKey;
     return YES;
 }
 
+- (void)scoutingChildren:(NSArray *)children {
+    NSArray *viewStack = [self viewStack];
+    NSSet *parentPtrs = [self parentPtrs];
+    for (id child in children) {
+        NSString *className = NSStringFromClass([child class]);
+        [child setViewStack:[viewStack arrayByAddingObject:className]];
+        [child setParentPtrs:[parentPtrs setByAddingObject:@((uintptr_t)child)]];
+        [child scoutingLeak];
+    }
+}
+
 - (void)checkIsDealloc {
     NSString *className = NSStringFromClass([self class]);
     NSLog(@"%@未释放,可能发生内存泄漏\n视图栈：\n%@",className,[self viewStack]);
@@ -34,6 +46,10 @@ static const void *const scoutingVStackKey = &scoutingVStackKey;
     objc_setAssociatedObject(self, scoutingVStackKey, viewStack, OBJC_ASSOCIATION_RETAIN);
 }
 
+- (void)setParentPtrs:(NSSet *)parentPtrs {
+    objc_setAssociatedObject(self, scoutingParentPtrsKey, parentPtrs, OBJC_ASSOCIATION_RETAIN);
+}
+
 - (NSArray *)viewStack {
     NSArray *viewStack = objc_getAssociatedObject(self, scoutingVStackKey);
     if (viewStack) {
@@ -41,6 +57,14 @@ static const void *const scoutingVStackKey = &scoutingVStackKey;
     }
     NSString *className = NSStringFromClass([self class]);
     return @[className];
+}
+
+- (NSSet *)parentPtrs {
+    NSSet *parentPtrs = objc_getAssociatedObject(self, scoutingParentPtrsKey);
+    if (!parentPtrs) {
+        parentPtrs = [[NSSet alloc] initWithObjects:@((uintptr_t)self), nil];
+    }
+    return parentPtrs;
 }
 
 + (NSMutableSet *)scoutWhitelist {

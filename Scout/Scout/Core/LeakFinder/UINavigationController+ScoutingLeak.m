@@ -45,8 +45,12 @@
     return popedVCArray;
 }
 
-- (void)scoutingLeak {
-    
+- (BOOL)scoutingLeak {
+    if (![super scoutingLeak]) {
+        return NO;
+    }
+    [self scoutingChildren:self.viewControllers];
+    return YES;
 }
 
 @end

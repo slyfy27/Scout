@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) UIViewController *pushVC;
+
 @end
 
 @implementation ViewController
@@ -20,14 +22,14 @@
 }
 
 - (IBAction)push:(id)sender {
-    LeakViewController *vc = [LeakViewController new];
-    vc.parentVC = self;
+    LeakViewController *vc = [[LeakViewController alloc] init];
+    self.pushVC = vc;
     [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (IBAction)present:(id)sender {
-    LeakViewController *vc = [LeakViewController new];
-    vc.parentVC = self;
+    LeakViewController *vc = [[LeakViewController alloc] init];
+    self.pushVC = vc;
     [self presentViewController:vc animated:YES completion:NULL];
 }
 

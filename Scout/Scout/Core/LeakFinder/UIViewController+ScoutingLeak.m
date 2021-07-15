@@ -10,7 +10,7 @@
 #import "NSObject+ScoutingLeak.h"
 #import <objc/runtime.h>
 
-static const void *const scoutingVCPopedKey = &scoutingVCPopedKey;
+const void *const scoutingVCPopedKey = &scoutingVCPopedKey;
 
 @implementation UIViewController (ScoutingLeak)
 
@@ -29,6 +29,11 @@ static const void *const scoutingVCPopedKey = &scoutingVCPopedKey;
     }
 }
 
+- (void)scoutingLead_viewWillAppear:(BOOL)animated {
+    [self scoutingLead_viewWillAppear:animated];
+    objc_setAssociatedObject(self, scoutingVCPopedKey, @(NO), OBJC_ASSOCIATION_RETAIN);
+}
+
 - (void)scoutingLeak_dismissControllerAnimated:(BOOL)animated completion:(void (^)(void))completion {
     [self scoutingLeak_dismissControllerAnimated:animated completion:completion];
     UIViewController *dismissedViewController = self.presentedViewController;
@@ -38,6 +43,20 @@ static const void *const scoutingVCPopedKey = &scoutingVCPopedKey;
     if (dismissedViewController) {
         [dismissedViewController scoutingLeak];
     }
+}
+
+- (BOOL)scoutingLeak {
+    if (![super scoutingLeak]) {
+        return NO;
+    }
+    [self scoutingChildren:self.childViewControllers];
+    if (self.presentedViewController) {
+        [self scoutingChildren:@[self.presentedViewController]];
+    }
+    if (self.isViewLoaded) {
+        [self scoutingChildren:@[self.view]];
+    }
+    return YES;
 }
 
 @end
