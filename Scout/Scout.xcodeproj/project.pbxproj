@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42D0DD3926A07643000810AF /* ScoutFPSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D0DD3826A07643000810AF /* ScoutFPSView.m */; };
 		8D6A0058269EC7F100B147C1 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6A0057269EC7F100B147C1 /* LeakViewController.m */; };
 		8D6A005E269ECB0800B147C1 /* UINavigationController+ScoutingLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6A005D269ECB0800B147C1 /* UINavigationController+ScoutingLeak.m */; };
 		8D794A35269D31160079432E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D794A34269D31160079432E /* AppDelegate.m */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		42D0DD3726A07643000810AF /* ScoutFPSView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoutFPSView.h; sourceTree = "<group>"; };
+		42D0DD3826A07643000810AF /* ScoutFPSView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoutFPSView.m; sourceTree = "<group>"; };
 		8D6A0056269EC7F100B147C1 /* LeakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeakViewController.h; sourceTree = "<group>"; };
 		8D6A0057269EC7F100B147C1 /* LeakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeakViewController.m; sourceTree = "<group>"; };
 		8D6A005C269ECB0800B147C1 /* UINavigationController+ScoutingLeak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ScoutingLeak.h"; sourceTree = "<group>"; };
@@ -108,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42D0DD3626A0761D000810AF /* FPS */ = {
+			isa = PBXGroup;
+			children = (
+				42D0DD3726A07643000810AF /* ScoutFPSView.h */,
+				42D0DD3826A07643000810AF /* ScoutFPSView.m */,
+			);
+			path = FPS;
+			sourceTree = "<group>";
+		};
 		8D794A27269D31160079432E = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +182,7 @@
 		8D794A6B269D32150079432E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				42D0DD3626A0761D000810AF /* FPS */,
 				8D794A75269D5E690079432E /* LeakFinder */,
 				8D794A7F269D5F6B0079432E /* NSObject+Scout.h */,
 				8D794A80269D5F6B0079432E /* NSObject+Scout.m */,
@@ -332,6 +345,7 @@
 				8D8FD76326A038FA004B4648 /* UITabBarController+ScoutingLeak.m in Sources */,
 				8D794A6E269D5E070079432E /* ScoutLeakFinder.m in Sources */,
 				8D794A8D269D81B60079432E /* UIViewController+ScoutingLeak.m in Sources */,
+				42D0DD3926A07643000810AF /* ScoutFPSView.m in Sources */,
 				8D6A005E269ECB0800B147C1 /* UINavigationController+ScoutingLeak.m in Sources */,
 				8D794A81269D5F6B0079432E /* NSObject+Scout.m in Sources */,
 				8D8FD76926A0396B004B4648 /* UIPageViewController+ScoutingLeak.m in Sources */,
