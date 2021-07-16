@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		42D0DD3926A07643000810AF /* ScoutFPSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D0DD3826A07643000810AF /* ScoutFPSView.m */; };
+		8D690DC026A11CC5006ED971 /* ScoutFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D690DBF26A11CC5006ED971 /* ScoutFPSMonitor.m */; };
+		8D690DC926A181C6006ED971 /* ScoutStuckMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D690DC826A181C6006ED971 /* ScoutStuckMonitor.m */; };
+		8D690DCF26A18897006ED971 /* FPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D690DCE26A18897006ED971 /* FPSViewController.m */; };
 		8D6A0058269EC7F100B147C1 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6A0057269EC7F100B147C1 /* LeakViewController.m */; };
 		8D6A005E269ECB0800B147C1 /* UINavigationController+ScoutingLeak.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6A005D269ECB0800B147C1 /* UINavigationController+ScoutingLeak.m */; };
 		8D794A35269D31160079432E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D794A34269D31160079432E /* AppDelegate.m */; };
@@ -48,6 +51,12 @@
 /* Begin PBXFileReference section */
 		42D0DD3726A07643000810AF /* ScoutFPSView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoutFPSView.h; sourceTree = "<group>"; };
 		42D0DD3826A07643000810AF /* ScoutFPSView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoutFPSView.m; sourceTree = "<group>"; };
+		8D690DBE26A11CC5006ED971 /* ScoutFPSMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoutFPSMonitor.h; sourceTree = "<group>"; };
+		8D690DBF26A11CC5006ED971 /* ScoutFPSMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoutFPSMonitor.m; sourceTree = "<group>"; };
+		8D690DC726A181C6006ED971 /* ScoutStuckMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScoutStuckMonitor.h; sourceTree = "<group>"; };
+		8D690DC826A181C6006ED971 /* ScoutStuckMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScoutStuckMonitor.m; sourceTree = "<group>"; };
+		8D690DCD26A18897006ED971 /* FPSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPSViewController.h; sourceTree = "<group>"; };
+		8D690DCE26A18897006ED971 /* FPSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPSViewController.m; sourceTree = "<group>"; };
 		8D6A0056269EC7F100B147C1 /* LeakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LeakViewController.h; sourceTree = "<group>"; };
 		8D6A0057269EC7F100B147C1 /* LeakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LeakViewController.m; sourceTree = "<group>"; };
 		8D6A005C269ECB0800B147C1 /* UINavigationController+ScoutingLeak.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ScoutingLeak.h"; sourceTree = "<group>"; };
@@ -116,6 +125,10 @@
 			children = (
 				42D0DD3726A07643000810AF /* ScoutFPSView.h */,
 				42D0DD3826A07643000810AF /* ScoutFPSView.m */,
+				8D690DBE26A11CC5006ED971 /* ScoutFPSMonitor.h */,
+				8D690DBF26A11CC5006ED971 /* ScoutFPSMonitor.m */,
+				8D690DC726A181C6006ED971 /* ScoutStuckMonitor.h */,
+				8D690DC826A181C6006ED971 /* ScoutStuckMonitor.m */,
 			);
 			path = FPS;
 			sourceTree = "<group>";
@@ -152,6 +165,8 @@
 				8D794A3A269D31160079432E /* ViewController.m */,
 				8D6A0056269EC7F100B147C1 /* LeakViewController.h */,
 				8D6A0057269EC7F100B147C1 /* LeakViewController.m */,
+				8D690DCD26A18897006ED971 /* FPSViewController.h */,
+				8D690DCE26A18897006ED971 /* FPSViewController.m */,
 				8D794A3C269D31160079432E /* Main.storyboard */,
 				8D794A3F269D31180079432E /* Assets.xcassets */,
 				8D794A41269D31180079432E /* LaunchScreen.storyboard */,
@@ -352,7 +367,10 @@
 				8D794A35269D31160079432E /* AppDelegate.m in Sources */,
 				8D794A46269D31180079432E /* main.m in Sources */,
 				8D794A38269D31160079432E /* SceneDelegate.m in Sources */,
+				8D690DCF26A18897006ED971 /* FPSViewController.m in Sources */,
 				8D6A0058269EC7F100B147C1 /* LeakViewController.m in Sources */,
+				8D690DC026A11CC5006ED971 /* ScoutFPSMonitor.m in Sources */,
+				8D690DC926A181C6006ED971 /* ScoutStuckMonitor.m in Sources */,
 				8D8FD75D26A03039004B4648 /* UIView+ScoutingLeak.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

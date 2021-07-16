@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ScoutFPSView : UIView
 
+- (void)setFps:(NSInteger)fps;
+
 @end
 
 NS_ASSUME_NONNULL_END

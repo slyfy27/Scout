@@ -23,6 +23,10 @@
     return self;
 }
 
+- (void)setFps:(NSInteger)fps {
+    _fpsLabel.text = @(fps).stringValue;
+}
+
 - (UILabel *)fpsLabel {
     if (!_fpsLabel) {
         _fpsLabel = [[UILabel alloc] init];

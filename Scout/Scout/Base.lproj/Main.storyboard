@@ -77,13 +77,43 @@
                                     <constraint firstAttribute="height" constant="48" id="u2v-Rv-MPD"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="o8D-aC-Wuu">
+                                <rect key="frame" x="20" y="315" width="374" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQV-pQ-oeb">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="48"/>
+                                        <state key="normal" title="FPS"/>
+                                        <connections>
+                                            <action selector="fps:" destination="Rix-SA-Ork" eventType="touchUpInside" id="CDO-g4-hh6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObG-Hm-pB8">
+                                        <rect key="frame" x="192" y="0.0" width="182" height="48"/>
+                                        <state key="normal" title="present"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="DgT-ws-RiT"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Performance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35g-yt-rUy">
+                                <rect key="frame" x="20" y="274.5" width="98.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l2u-nO-B2P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="o8D-aC-Wuu" firstAttribute="leading" secondItem="l2u-nO-B2P" secondAttribute="leading" constant="20" id="5vL-6k-5bV"/>
                             <constraint firstItem="DdB-e0-1vJ" firstAttribute="leading" secondItem="l2u-nO-B2P" secondAttribute="leading" constant="20" id="Ctu-jj-gcj"/>
                             <constraint firstItem="cIY-Xb-uix" firstAttribute="top" secondItem="l2u-nO-B2P" secondAttribute="top" constant="48" id="GYk-Pk-zox"/>
+                            <constraint firstItem="35g-yt-rUy" firstAttribute="leading" secondItem="l2u-nO-B2P" secondAttribute="leading" constant="20" id="LQv-rp-tLR"/>
+                            <constraint firstItem="l2u-nO-B2P" firstAttribute="trailing" secondItem="o8D-aC-Wuu" secondAttribute="trailing" constant="20" id="M96-pP-Dyb"/>
                             <constraint firstItem="cIY-Xb-uix" firstAttribute="leading" secondItem="l2u-nO-B2P" secondAttribute="leading" constant="37" id="PSt-3T-qJH"/>
+                            <constraint firstItem="o8D-aC-Wuu" firstAttribute="top" secondItem="35g-yt-rUy" secondAttribute="bottom" constant="20" id="TNg-xc-2wT"/>
+                            <constraint firstItem="35g-yt-rUy" firstAttribute="top" secondItem="DdB-e0-1vJ" secondAttribute="bottom" constant="50" id="Xv0-ol-A96"/>
                             <constraint firstItem="l2u-nO-B2P" firstAttribute="trailing" secondItem="DdB-e0-1vJ" secondAttribute="trailing" constant="20" id="Yxh-RO-Bb7"/>
                             <constraint firstItem="DdB-e0-1vJ" firstAttribute="top" secondItem="cIY-Xb-uix" secondAttribute="bottom" constant="20" id="bOr-Bw-9nr"/>
                         </constraints>

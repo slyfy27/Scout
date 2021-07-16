@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "LeakViewController.h"
+#import "FPSViewController.h"
 
 @interface ViewController ()
 
@@ -33,5 +34,11 @@
     [self presentViewController:vc animated:YES completion:NULL];
 }
 
+#pragma mark - Performance
+
+- (IBAction)fps:(id)sender {
+    FPSViewController *vc = [[FPSViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end
